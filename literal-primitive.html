@@ -9,35 +9,49 @@
     
     <body>
         
-        
+        <p id="p1"></p>
+        <p id="p2"><b></b></p>
+        <p id="p3"><b></b></p>
+
         <script>
         
         // there are 5 primiitive data types in javascript: string, number, boolean, null and undefinded
         // Only String, Number and Boolean data types have complementary contructor objects. 
             
-        var str1 = "this is a simple string"; // the quoted string is the literal    
-        var num1 = 1.46; // the value of 1.45 is the literal
-        var answer = true; // the values of the true and false are boolean literal
-            
-            
+                
         // We can create primitive String, Number, Boolean values either by using literal representation or using the object without the new operator. 
-            
-        var str2 = String("This is a simple string"); // primitive string
+        
+        var str1 = "simple literal string"; // the quoted string is the literal    
+        var str2 = String("String: primitive literal string object"); // primitive string
+        var str3 = new String("new String: deliberately instantiate an object using new operator"); // string object instance
+        
+        var num1 = 1.45; // the value of 1.45 is the literal
         var num2 = Number(1.45); // primititive number
-        var bool2 = Boolean(true); // primititive boolean
+        var num3 = new Number(1.45); // deliberately instatiate an object
             
         // To deliberately instantiate an object, use the new operator. 
-        var str3 = new String("This is a simple string"); // String object instance
-        var num3 = new Number(1.50);
+
+        var bool1 = true; // the values of the true and false are boolean literal
+        var bool2 = Boolean(true); // primititive boolean
         var bool3 = new Boolean(true);
         
             
         (function() {
-            if(str1 === "this is a simple string"){
-                console.log("true");
-            }else {
-                console.log("false");
-            }    
+        
+        if(typeof str1 === "string"){
+            console.log(str1 + ' equal to a string literal value');
+        }               
+        if(typeof str2 === "string") {
+            console.log(str2 + ' equal to a string primitive value');
+        }            
+        if(typeof str3 === "string") {
+            console.log(str3 + ' equal to an object primitive');
+        }
+            
+        document.getElementById("p1").innerHTML = str1;                   
+        document.getElementById("p2").innerHTML = str2;                   
+        document.getElementById("p3").innerHTML = str3;
+            
         })();
     
         

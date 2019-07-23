@@ -10,8 +10,8 @@
     <body>
         
         <p id="p1"></p>
-        <p id="p2"><b></b></p>
-        <p id="p3"><b></b></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
 
         <script>
         
@@ -21,37 +21,35 @@
                 
         // We can create primitive String, Number, Boolean values either by using literal representation or using the object without the new operator. 
         
-        var str1 = "simple literal string"; // the quoted string is the literal    
-        var str2 = String("String: primitive literal string object"); // primitive string
-        var str3 = new String("new String: deliberately instantiate an object using new operator"); // string object instance
+        var str1 = "string"; // the quoted string is the literal    
+        var str2 = String("String: primitive literal"); // primitive string
+        var str3 = new String("deliberately instantiate an object using new operator"); // string object instance
         
         var num1 = 1.45; // the value of 1.45 is the literal
         var num2 = Number(1.45); // primititive number
-        var num3 = new Number(1.45); // deliberately instatiate an object
+        var num3 = new Number(1.45); // deliberately instatiate a number object
             
         // To deliberately instantiate an object, use the new operator. 
 
         var bool1 = true; // the values of the true and false are boolean literal
         var bool2 = Boolean(true); // primititive boolean
-        var bool3 = new Boolean(true);
+        var bool3 = new Boolean(true); // deliberately instatiates a boolean object
         
-            
+        
+        // EEFI function invokes automatically
         (function() {
-        
-        if(typeof str1 === "string"){
-            console.log(str1 + ' equal to a string literal value');
-        }               
-        if(typeof str2 === "string") {
-            console.log(str2 + ' equal to a string primitive value');
-        }            
-        if(typeof str3 === "string") {
-            console.log(str3 + ' equal to an object primitive');
-        }
             
-        document.getElementById("p1").innerHTML = str1;                   
-        document.getElementById("p2").innerHTML = str2;                   
-        document.getElementById("p3").innerHTML = str3;
+          console.log(typeof str1);
+          console.log(typeof str2);
+          console.log(typeof str3);
             
+          console.log(typeof num1);
+          console.log(typeof num2);
+          console.log(typeof num3);
+            
+          console.log(typeof bool1);
+          console.log(typeof bool2);
+          console.log(typeof bool3);
         })();
     
         

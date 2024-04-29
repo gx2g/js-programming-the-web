@@ -19,7 +19,10 @@
         // Only String, Number and Boolean data types have complementary contructor objects. 
             
                 
-        // We can create primitive String, Number, Boolean values either by using literal representation or using the object without the new operator. 
+        /*
+         We can create primitive String, Number, Boolean values either by using literal representation or using the 
+         object without the new operator. 
+         */
         
         var str1 = "simple literal string"; // the quoted string is the literal    
         var str2 = String("String: primitive literal string object"); // primitive string
@@ -44,9 +47,13 @@
         if(typeof str2 === "string") {
             console.log(str2 + ' equal to a string primitive value');
         }            
-        if(typeof str3 === "string") {
+        if(typeof str3 === "object") {
             console.log(str3 + ' equal to an object primitive');
         }
+
+        console.log(typeof str1);
+        console.log(typeof str2);
+        console.log(typeof str3);
             
         document.getElementById("p1").innerHTML = str1;                   
         document.getElementById("p2").innerHTML = str2;                   
